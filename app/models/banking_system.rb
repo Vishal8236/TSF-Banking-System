@@ -1,0 +1,2 @@
+class BankingSystem < ApplicationRecord
+end

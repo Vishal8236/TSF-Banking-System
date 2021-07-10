@@ -1,0 +1,22 @@
+<table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Current balance</th>
+        <th colspan="5"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @banking_systems.each do |banking_system| %>
+        <tr>
+          <td><%= banking_system.name %></td>
+          <td><%= banking_system.email %></td>
+          <td><%= banking_system.current_balance %></td>
+          <td class="text-light text-center pointer_c bg-primary" id="<%=banking_system.id%>" onclick="show_payment_form(this)" >Make Transfer</td>
+          <td class='text-light text-center pointer_c bg-info ml-1' ><%= link_to 'Edit User', edit_banking_system_path(banking_system), class:'text-light' %></td>
+          <td class='text-light text-center pointer_c bg-danger ml-1'><%= link_to 'Destroy User', banking_system, method: :delete, class:'text-light', data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>

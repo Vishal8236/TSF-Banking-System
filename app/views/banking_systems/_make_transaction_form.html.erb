@@ -1,0 +1,33 @@
+<!-- Payment Modal -->
+<div class="modal fade" id="payment_modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+		<div class="modal-header">
+			<h5 class="modal-title" id="exampleModalLabel">Pay Securely With Spark Bank</h5>
+			<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+		</div>
+		<%= form_with url: "/do_transaction", method: :post, remote: true do |form| %>
+			<div class="modal-body">
+				<div>
+					<div class="row  align-items-center">
+						<div class="col-5">
+							<div class="d-flex align-items-center"><strong>From - </strong> <%= @u_data.name %> </div>
+							<%= form.hidden_field :from, value: @u_data.email %>
+						</div>
+						<div class="col-7 d-flex align-items-center">
+							<strong class="mt-2"> To  - &nbsp</strong> <span> <%= select_tag 'to', options_for_select(@all_user), id: "choose_customer", class:'form-control' %></span>
+						</div>
+					</div>
+					<div class="mt-3">
+						<%= form.text_field :amount ,placeholder:"Enter amount here", class:'form-control' %>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+				<%= form.submit "Pay", class:'btn btn-primary' %>
+			</div>
+		<% end %>
+		</div>
+	</div>
+</div>

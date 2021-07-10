@@ -1,0 +1,85 @@
+<style>
+	* {box-sizing: border-box;}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+	margin-top: 20px;
+  border-radius: 5px;
+  padding: 20px;
+}
+</style>
+<div class="px-5 " style="margin-top:9%">
+	<div class="row h-100 mt-5">
+		<div class="col-sm-6  my-auto">
+			<div class="h1  font-weight-bold">Welcome In Spark Bank!</div>
+			<span class="h5 text-secondary">Spark Bank is provide a way where you can Transfer your money to other in <strong>Secure Way</strong>.</span>
+			<div class="row mt-4">
+				<div class="col-2">
+					<a href="/banking_systems" class="btn btn-outline-primary">Get Start</a>
+				</div>
+				<div class="col-2">
+					<a href="/banking_systems" class="btn btn-outline-info">Learn More</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-6 text-center">
+			<img src="https://image.freepik.com/free-vector/mobile-bank-users-transferring-money-currency-conversion-tiny-people-online-payment-cartoon-illustration_74855-14454.jpg" alt="" height="600px" width="700px">
+		</div>
+	</div>
+</div>
+<div class="bg-secondary " style="margin-top:9%" id="about">
+	<div class="row px-5 pt-5 pb-5">
+		<div class="col-sm-7">
+			<div class="text-light" style="font-size:25px">
+				A bank is a financial institution licensed to receive deposits and make loans. Banks may also provide financial services such as wealth management, currency exchange, and safe deposit boxes. There are several different kinds of banks including retail banks, commercial or corporate banks, and investment banks.
+				Banks also provide credit opportunities for people and corporations. The money you deposit at the bank—short-term cash—is used to lend to others for long-term debt such as car loans, credit cards, mortgages, and other debt vehicles. This process helps create liquidity in the market—which creates money and keeps the supply going.
+			</div>
+		</div>
+		<div class="col-sm-5">
+		</div>
+	</div>
+</div>
+<div class="container" id="contact">
+  <form action="/submit_contact">
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+    <label for="country">Country</label>
+    <select id="country" name="country">
+      <option value="australia">Australia</option>
+      <option value="canada">Canada</option>
+      <option value="usa">USA</option>
+    </select>
+
+    <label for="subject">Subject</label>
+    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+    <input type="submit" value="Submit">
+  </form>
+</div>
